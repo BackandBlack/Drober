@@ -1,4 +1,4 @@
-# MAKEFILE NOTES
+# MAKEFILE NOTES -> (https://hiltmon.com/blog/2013/07/03/a-simple-c-plus-plus-project-structure/)
 # VAR  = value 	--> (lazy set) Normal setting of a variable - values within it are recursively expanded when the variable is used, not when it's declared
 # VAR := value	--> (immediate set) Setting of a variable with simple expansion of the values inside - values within it are expanded at declaration time
 # VAR ?= value	--> (if absent) Setting of a variable only if it doesn't have a value
@@ -22,7 +22,7 @@ TARGET:=bin/Drober
 SRCEXT:=cpp
 SOURCES:=$(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS:=$(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-LIB :=
+LIB := -L lib -ltensorflow
 INC := -I include
 
 $(TARGET): $(OBJECTS)

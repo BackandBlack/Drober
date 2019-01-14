@@ -1,0 +1,5 @@
+Set rpath for Tensorflow SO file
+
+https://matthew-brett.github.io/docosx/mac_runtime_link.html
+
+
